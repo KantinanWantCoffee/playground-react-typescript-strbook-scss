@@ -1,0 +1,110 @@
+.landing {
+    &__hero {
+        height: 100vh;
+        background: radial-gradient(circle at center, #4e2f92 0%, #1a1a2e 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__content-wrapper {
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__content {
+        margin-top: auto;
+        margin-bottom: auto;
+        text-align: center;
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .highlight {
+            background: linear-gradient(90deg, #d977ff, #80ffea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+    }
+}
+
+.floating-balls {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+    
+    .ball {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        opacity: 0.3;
+        mix-blend-mode: screen;
+        animation: float 12s ease-in-out infinite alternate;
+    }
+
+    .ball--1 {
+        top: 10%;
+        left: 15%;
+        width: 200px;
+        height: 200px;
+        background: #d977ff;
+        animation-delay: 0s;
+    }
+
+    .ball--2 {
+        top: 50%;
+        left: 70%;
+        width: 160px;
+        height: 160px;
+        background: #80ffea;
+        animation-delay: 2s;
+    }
+
+    .ball--3 {
+        top: 70%;
+        left: 30%;
+        width: 180px;
+        height: 180px;
+        background: #a3bffa;
+        animation-delay: 4s;
+    }
+
+    .ball--4 {
+        top: 20%;
+        left: 80%;
+        width: 120px;
+        height: 120px;
+        background: #fcd34d;
+        animation-delay: 6s;
+    }
+
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0) scale(1);
+    }
+
+    100% {
+        transform: translateY(-30px) translateX(20px) scale(1.05);
+    }
+}
