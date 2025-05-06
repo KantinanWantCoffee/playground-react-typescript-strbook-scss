@@ -1,10 +1,9 @@
-import React from 'react'
 import { Header } from '../../components';
 
 const Garden = () => {
     return (
-        <main className="landing">
-            <section className="landing__hero">
+        <main className="landingzone">
+            <section className="landing__hero__zone">
                 <div className="floating-balls">
                     <span className="ball ball--1"></span>
                     <span className="ball ball--2"></span>
